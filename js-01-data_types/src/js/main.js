@@ -121,3 +121,106 @@ console.log(`myAge es null?  ${ myAge === null } `); // true
 */
 const isActive = true;
 console.log( typeof isActive ); // 'boolean'
+
+// ------------------------------------------------------------------
+/* 
+    Conversion de datos (type casting)
+    El type casting es el acto de convetir variables de un tipo de dato a otro.
+    Esto puede ser implicito (automático) o explicito (forzado por el desarrollador).
+
+*/
+
+// Conversión implícita
+const resultado = "5" + 2 ; // "52" Número convertido a string
+const multiplicacion =  "5" * 3; // 15 El string convertido a number
+//     5   * 3 = 15
+const division =  "two" * 6; // NaN
+// NaN * 6 = NaN
+
+/*
+    Conversión explícita de datos (coerción de tipo)
+
+*/
+const edadMascota = 10;
+// conversion explicita a String ======================================================
+const edadMascotaString = String(edadMascota);
+console.log(`Mi mascota tiene ${edadMascotaString} años`);
+console.log(`Mi mascota tiene ${edadMascota} años`);
+console.log( String( true ) ); // "true"
+console.log( String( null ) ); // "null"
+console.log( String( undefined ) ); // "undefined"
+console.log( String( [] ) ); // empty Array -> ""
+console.log( String( [2,3,4,5,null,3] ) ); // empty Array -> ""
+console.log( String( {} ) ); // [object Object]
+console.log( String( {name:"Serch", active:true} ) ); // [object Object]
+// Para los objetos se recomiendo usar el método JSON.stringify()
+// convierte un objeto en formato JSON
+console.log( JSON.stringify( {name:"Serch", active:true} ) ); // [object Object]
+
+// conversion implícita a Number ======================================================
+const costo = "100";
+const costoConIVA = costo * 1.16; // 116.00 conversión implícita de string a number
+
+// conversion explicita a Number ======================================================
+const precioCroquetas = "2000";
+const precioJabon = "300.50";
+const precioVitaminas = "600.30";
+const costoTotal = precioCroquetas + precioJabon + precioVitaminas; // "2000300.50600.30"
+console.log( costoTotal );
+
+/*
+    Number() vs parseInt()
+    - Number convierte enteros y decimales
+    - Number devuelve NaN si la cadena contiene algún caracter no numérico
+    - Con parseInt y parseFloat, si la entrada comienza con un valor no númerico devuelve NaN
+    - parseInt convierte solo la parte entera
+    - parseFloat convierte la parte entera y decimales
+    - parseInt y parseFloat realiza la conversión hasta encontrar un caracter no númerico
+*/
+console.log( Number("68.58") ); // 68.58
+console.log( parseInt("68.58") ); // 68
+console.log( parseFloat("68.58") ); // 68.58
+
+console.log( Number("68.58 dolares") ); // 68.58
+console.log( parseInt("68.58 dolares") ); // 68
+console.log( parseFloat("68.58 dolares") ); // 68.58
+
+console.log( Number("$68.58 dolares") ); // NaN
+console.log( parseInt("$68.58 dolares") ); // NaN
+console.log( parseFloat("$68.58 dolares") ); // NaN
+
+console.log( Number("68-58") ); // NaN
+console.log( parseInt("68-58") ); // 68
+console.log( parseFloat("68-58") ); // 68
+
+console.log ( Number( true ) ); // 1 
+console.log ( Number( false ) );  // 0
+
+console.log ( Number( [] ) );  // 0
+console.log ( Number( [30] ) );  // 30
+console.log ( Number( [30,40] ) );  // NaN
+
+// Conversión a tipo boolean
+// En la conversión a boolean, los valores que se consideran falsos son:
+// "" (empty string), 0, null, undefined
+console.log( Boolean(1) ); // true
+console.log( Boolean(100000) ); // true
+console.log( Boolean(-10000) ); // true
+console.log( Boolean(0) ); // false
+
+console.log( Boolean("") ); // false
+console.log( Boolean(" ") ); // true
+console.log( Boolean("1") ); // true
+console.log( Boolean("0") ); // true
+
+// Resumen:
+
+// Number()
+// [] (empty array) -> 0, [30]-> 30, [30,30]->NaN, false-> 0, true-> 1
+
+// String()
+// [] -> "", [12,2]->"12,2", function(){}-> "function(){}"
+// {} ->"[object,object]", {clave:valor, age:17} ->"[object,object]"
+
+// Para convertir un objeto a string, la forma correcta es usar
+// el método JSON.stringyfy( objeto );
