@@ -187,3 +187,99 @@ console.log(velocidadVentiladorIf(1));
 console.log(velocidadVentiladorIf(2));
 console.log(velocidadVentiladorIf(3));
 console.log(velocidadVentiladorIf(4));
+
+// ------------------------ Operador ternario --------------------------
+/*
+    Es el único operador de JavaScript que tiene 3 operandos.
+    Generalmente se utiliza como opción a la sentencia if-else.
+    Sintaxis:
+        condición ? expresiónSiCondiciónEsVerdadera : expresionSiCondiciónEsFalsa; 
+*/
+
+const pagoTarjetaCredito = true;
+let msj;
+
+if ( pagoTarjetaCredito ){
+    msj = "A realizado el pago de su TC";
+}else {
+    msj = "No ha realizado el pago de su TC";
+}
+
+// Operador Ternario
+msj = pagoTarjetaCredito === true ? "A realizado el pago de su TC" : "No ha realizado el pago de su TC";
+console.log(msj);
+
+console.log( pagoTarjetaCredito ? "Pagado" : "No pagado" );
+
+/**
+ * Función que reciba la edad de una persona y devuelva el mensaje:
+ * Si la edad es mayor de 18: "Eres mayor de edad"
+ * En caso contrario: "Eres menor de edad"
+ * @param {number} edad
+ * @returns {string} mensaje
+ */
+
+const verificarEdad = (edad) => edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+console.log(verificarEdad(17)); 
+console.log(verificarEdad(20)); 
+
+// ------------------- Ejercicio Estaciones del año --------------------------
+/*
+    Preguntar por el número de mes (prompt o DOM), del 1 al 12
+    Desplegar de acuerdo al mes un Alert (mostrarlo en el DOM) la estación del año.
+    mes 12,  1,  2 = invierno.
+    mes  3,  4,  5 = primavera
+    mes  6,  7,  8 = verano
+    mes  9, 10, 11 = otoño 
+    Realizar una versión con if-else-elseif y otra con switch.
+
+*/
+
+const determinarEstacionIf = () => {
+    const mes = parseInt(prompt("Introduce un número de mes (1-12):"));
+    let estacion;
+
+    if (mes === 12 || mes === 1 || mes === 2) {
+        estacion = "Invierno ❄️";
+    } else if (mes >= 3 && mes <= 5) {
+        estacion = "Primavera 🌸";
+    } else if (mes >= 6 && mes <= 8) {
+        estacion = "Verano ☀️";
+    } else if (mes >= 9 && mes <= 11) {
+        estacion = "Otoño 🍂";
+    } else {
+        estacion = "¡Mes inválido!";
+    }
+
+    alert(estacion);
+};
+
+// Ejecutar la función
+determinarEstacionIf();
+
+const determinarEstacionSwitch = () => {
+    const mes = parseInt(prompt("Introduce un número de mes (1-12):"));
+    let estacion;
+
+    switch (mes) {
+        case 12: case 1: case 2: 
+            estacion = "Invierno ❄️";
+            break;
+        case 3: case 4: case 5: 
+            estacion = "Primavera 🌸";
+            break;
+        case 6: case 7: case 8: 
+            estacion = "Verano ☀️";
+            break;
+        case 9: case 10: case 11: 
+            estacion = "Otoño 🍂";
+            break;
+        default: 
+            estacion = "¡Mes inválido!";
+    }
+
+    alert(estacion);
+};
+
+// Ejecutar la función
+determinarEstacionSwitch();
