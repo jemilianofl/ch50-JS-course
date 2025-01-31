@@ -85,7 +85,7 @@ console.log( gelatinasLista );
     ]
 */
 
-const refGeletinasLista = document.getElementById("gelatina-lista");
+/* const refGeletinasLista = document.getElementById("gelatina-lista");
 console.log(refGeletinasLista);
 refGeletinasLista.innerHTML = gelatinasLista;
 
@@ -100,7 +100,7 @@ const generarListaCantantes = (cantantesArray) => {
 }
 const insertarListaDeCantantesAlDOM = (lista, refDom)=> refDom.innerHTML = lista;
 const listItemsOfCantantes = generarListaCantantes(cantantes);
-insertarListaDeCantantesAlDOM( listItemsOfCantantes, refListaCantantes);
+insertarListaDeCantantesAlDOM( listItemsOfCantantes, refListaCantantes); */
 
 
 // ------------------- Uso de break en ciclos ----------------------------
@@ -123,3 +123,153 @@ for (let i = 1; i <= 7; i++ ){
         if ( i >= 4 ) break;
     }
 }
+
+// ================ Ejercicio mental ============================
+let myIteration;
+
+for (myIteration = 0; myIteration <= 5; myIteration++) {
+    console.log("For loop", myIteration);
+    // if ( myIteration === 3) break;
+}
+
+console.log("Final", myIteration)
+
+// ======================== El scope de las variables =====================
+
+/*
+    Variables declaradas con var, let y const tienen un alcance de función. 
+    Esto significa que están limitadas al contexto de la función 
+    en la que se declaran.
+*/
+function functionScope(){
+    var myVar = 10;
+    let myLet = 20;
+    const myConst = 30;
+    console.log(myVar);
+    console.log(myLet);
+    console.log(myConst);
+    
+}
+functionScope();
+
+//console.log(myVar); // myVar is not defined
+//console.log(myLet); // myLet is not defined
+//console.log(myConst); // myConst is not defined
+
+// ================ Reassigment and Redeclaration========
+/*
+    Declarar una variable significa que se reserva el nombre 
+    en memoria en el scope actual. 
+
+    Inicializar una variable es establecer el valor de la variable
+*/
+// Pueden ser reasignadas y redeclaradas dentro del 
+// mismo contexto de función.
+var userName = 10;
+userName = 20; // Reasignación válida
+var userName = 30; // Redeclaración válida en el mismo contexto de función
+// Pueden ser reasignadas dentro del mismo bloque y no pueden 
+// ser redeclaradas en el mismo ámbito.
+let age = 10;
+age = 20; // Reasignación válida
+// let age = 30; // Error: No se puede redeclarar en el mismo ámbito
+// No pueden ser reasignadas después de su inicialización y tampoco 
+// pueden ser redeclaradas en el mismo ámbito.
+const address = 10;
+// address = 20; // Error: No se puede reasignar
+// const address = 30; // Error: No se puede redeclarar
+
+// ================ Block Scope ====================
+/*
+    Variables declaradas con let y const tienen un alcance de bloque. 
+    Esto significa que están limitadas al bloque en el que se declaran.
+*/
+{
+    var a = "a";
+    let b = "b";
+    const c = "c"; 
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+console.log(a); // a
+// console.log(b); // b is not defined
+// console.log(c); // c is not defined
+
+
+for (let incremento = 0; incremento < 10; incremento++) {
+    console.log(incremento);
+}
+// console.log(incremento); // incremento no está definida 
+
+// ================ Hoisting =======================
+/*
+    El "hoisting" en JavaScript es un comportamiento que ocurre durante 
+    la fase de compilación antes de la ejecución del código. 
+    Se refiere a la elevación (movimiento) de las declaraciones 
+    de variables y funciones al inicio de su contexto de ejecución
+*/
+
+/*
+    Las variables declaradas con var son elevadas al inicio de su contexto 
+    de ejecución (ya sea el ámbito de función o el ámbito global).
+    
+    Sin embargo, solo la declaración de la variable es elevada, 
+    no la asignación. Esto significa que la variable existe, 
+    pero su valor es undefined hasta que llega a la línea de asignación.
+*/
+console.log(phone); // undefined
+var phone = "55-65-123-123";
+console.log(phone); // 55-65-123-123
+
+/*
+    Las variables declaradas con let y const también se elevan al 
+    inicio de su contexto, pero a diferencia de var, no se inicializan 
+    automáticamente con undefined. La fase de inicialización de estas 
+    variables no ocurre hasta llegar a la línea de código donde se declaran.
+*/
+
+// ------------------- Uso de continue y label en ciclos anidados -------------------------
+
+
+console.log( NaN === NaN ); // false
+for (let i = 0; i <= 5; i++ ){
+    if (i === 3) continue;
+    console.log("Estoy dentro del ciclo for");
+    console.log("Valor de i ", i);
+}
+
+// ============== Ciclo While ======================
+//                (while loop)
+/*
+    Crea un bucle que ejecuta una sentencia mientras la condición especificada
+    se cumpla.
+    Sintaxis:
+        while( condición) sentencia;
+        while ( condición ){
+            sentencias;
+        }
+*/
+
+while ( confirm("¿Quieres que te genere tu número de la suerte ")) {
+    // random devuelve un número aleario entre 0 (incluido) y 1 (excluido)
+    console.log(`Tu número de la suerte es ${ Math.random() }`);
+    // Número aletorio del 0 al 10 (excluido)
+    console.log(`Tu número de la suerte es ${ Math.random() * 10 }`);
+    // Número aleatorio del 1 al 11 (excluido)
+    console.log(`Tu número de la suerte es ${ (Math.random() * 10) + 1 }`);
+    // Número aleatorio del 1 al 11 (excluido)
+    console.log(`Tu número de la suerte es ${ Math.floor((Math.random() * 10) + 1) }`);
+    
+}
+
+// Generar 100 números aleatorios del 1 al 50
+// Imprimir de forma descendente
+
+for (let i = 0; i < 100; i++) {
+    console.log( Math.floor((Math.random() * 50) + 1) );
+}
+console.log( "Imprimir de forma descendente" );
+3
+
+
