@@ -1,4 +1,5 @@
 /*
+<<<<<<< HEAD
     En JavaScript, una expresión es cualquier fragmento de código que 
     produce un valor. Puede ser tan simple como un número o una variable, 
     o más compleja, como una operación matemática o una llamada a función.
@@ -76,6 +77,93 @@ console.log( 3 != "3" ); // false
 console.log( 3 !== "3" ); // true
 
 // Si un operando es null y el otro undefined, devuelve verdadero (true)
+=======
+ En JavaScript, una expresión es cualquier fragmento de código que 
+ produce un valor. Puede ser tan simple como un número o una variable, 
+ o más compleja, como una operación matemática o una llamada a función.
+
+Ejemplos:
+
+10          // Número (expresión literal)
+x           // Variable (si x está definida)
+5 + 3       // Expresión aritmética (devuelve 8)
+true && false // Expresión lógica (devuelve false)
+"Hola".length // Expresión con propiedad (devuelve 4)
+
+*/
+
+
+// ---------------- Opéradores aritméticos ----------------
+/* 
+   Los operadores aritméticos toman valores numéricos 
+   (ya sean literales o variables) como sus operandos 
+   y devuelven un solo valor numérico.
+
+   adición +
+   multiplicación *
+   substracción -
+   división /
+   resto %
+   exponencial **  - Math.pow(2, 3)   2**3
+*/
+// ---- Precedencia de operadores -------------------------
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+console.log(  3 * 2 / 2  ); // 3
+console.log(  3 / 2 * 2  ); // 3
+console.log(  2 * 4 / 2**3 ); // 1
+console.log(  3 ** 2 ** 3  ); // 6561 
+
+// ---------------- Opéradores relacionales ----------------
+/*
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than
+  
+  Un operador de comparación compara sus operandos y devuelve un valor 
+  Boolean basado en si la comparación es verdadera o no.
+
+  <  menor que
+  >  mayor que
+  <= menor o igual que
+  >= mayor o igual que
+
+   - Valores booleanos true y false se convierten en 1 y 0 respectivamente.
+   - null se convierte a 0.
+   - undefined se convierte a NaN.
+*/
+console.log(  3 < 5 ); // true
+console.log(  3 > 5 ); // false
+console.log(  3 <= 3 ); // true
+console.log(  3 >= 3 ); // true
+
+console.log( null <= 0 ); // true
+console.log( undefined <= 0 ); // false
+
+console.log(  "3" >= 3 ); // true
+console.log(  "tree" >= 3 ); // false
+
+
+// ---------------- Operadores de igualdad ----------------
+/*
+  https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Equality
+
+  Un operador de igualdad compara dos valores y devuelve un valor Boolean
+  basado en si la comparación es verdadera o no.
+  ==  igual que
+  !=  diferente que
+  === igual que y mismo tipo de dato
+  !== diferente que y mismo tipo de dato
+
+  - null y undefined NO son convertidos a cero
+
+*/
+console.log(  3 == 3 );  // true
+console.log(  3 == "3" ); // true
+console.log(  3 === "3" ); // false
+console.log(  3 !== "3" ); // true
+console.log(  3 != "3" );  // false
+
+// Si un operando es null y el otro undefined, devuelve verdadero(true).
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 console.log( null == undefined ); // true
 
 // Si ambos son objetos, devuelve true solo si ambos operandos hacen 
@@ -83,6 +171,10 @@ console.log( null == undefined ); // true
 const obj1 = { name: "Juan" };
 const obj2 = { name: "Juan" };
 const obj3 = obj1;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 console.log( obj1 == obj2 ); // false
 console.log( obj1 == obj3 ); // true
 
@@ -90,6 +182,10 @@ console.log( obj1 == obj3 ); // true
 // Al comparar un número con una cadena, convierte la cadena en un valor numérico.
 console.log(  3 == "3" ); // true
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 // Si uno de los operandos es booleano, convierte el operando booleano en 
 // 1 si es verdadero y en 0 en el caso de falso.
 console.log(  1 == true ); // true
@@ -99,10 +195,17 @@ console.log(  0 == false ); // true
 // String: devuelve verdadero solo si ambos operandos tienen los mismos caracteres y en el mismo orden.
 console.log( "hola" == "hola" ); // true
 console.log( "hola" == "Hola" ); // false
+<<<<<<< HEAD
 console.log( 'Hola "Ch50" ' == 'Hola "Ch50" ');
 console.log( "Hola \"Ch50\" " == "Hola \"Ch50\" ");
 
 console.log("Primer línea,\nsegunda línea, \n\ttercer línea")
+=======
+console.log( 'Hola "Ch50" ' == 'Hola "Ch50" ' ); 
+console.log( "Hola \"Ch50\" " == "Hola \"Ch50\" " ); 
+
+console.log("Primer línea,\nsegunda línea, \n\ttercer línea");
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 
 
 // Se recomienda usar el método localCompare(): compara cadenas de texto de acuerdo con las reglas de un idioma específico
@@ -110,7 +213,11 @@ console.log("apple".localeCompare("banana")); // -1 (porque "apple" < "banana")
 console.log("grape".localeCompare("grape"));  // 0 (son iguales)
 console.log("pear".localeCompare("orange"));  // 1 (porque "pear" > "orange")
 console.log("a".localeCompare("A", "en", { sensitivity: "base" })); // 0
+<<<<<<< HEAD
 console.log( "a".localeCompare("A") ); //
+=======
+
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 
 // Number: devuelve verdadero solo si ambos operandos tienen el mismo valor. 
 // +0 y -0 se tratan como el mismo valor. 
@@ -120,6 +227,7 @@ console.log(  NaN == NaN ); // false
 console.log(  1 == 1 ); // true
 console.log(  1 == 1.0 ); // true
 console.log(  1 == 1.1 ); // false
+<<<<<<< HEAD
 console.log(  isNaN("hola" / 3 )  ); // true
 
 // ------- Operadores de asignación ----------------
@@ -138,31 +246,76 @@ let suma = 0;
 // Agregar 2 al valor de suma
 suma += 2;
 /*  suma =+ 2; */
+=======
+
+console.log(  isNaN("hola" / 3 )  ); // true
+
+
+// ------- Operadores de asignación ----------------
+/*
+ Asigna un valor a su operador izquierdo basándose en el valor
+ de su operando derecho:
+
+ asignación =
+ 
+ Operadores abreviados ( compuestos ):
+  op1 += op2  -> op1 = op1 + op2
+  op1 -= op2  -> op1 = op1 - op2
+  op1 *= op2  -> op1 = op1 * op2
+
+*/
+let suma = 0;
+// Agregar 2 al valor de suma
+// suma = suma  + 2;
+suma += 2;
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 
 // --------- ejercicio mental --------------------
 let valorA = 15;
 valorA *= 2; // valorA = valorA * 2;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 // --------- ejercicio mental --------------------
 let mensaje = "Me voy a de vacaciones";
 mensaje += 2; // mensaje = mensaje + 2; "Me voy a de vacaciones2"
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 // -------------- Operadores unarios ------------------
 // Solo actuan sobre un operando
 // Negación unaria (cambia el signo en números)
 let numero = 3;
 let dinero = -numero; // -3
 console.log( numero, dinero); // 3, -3
+<<<<<<< HEAD
 // suma unaria (No cambia el signo el números)
 let pago = +dinero; // 
 console.log( pago ); // -3
 let intereses = +"5.23"; // number
 console.log( 5 + intereses ); //  10.23
 console.log( 5 + parseInt(intereses) ); //  10.23
+=======
+
+// suma unaria (No cambia el signo el números)
+let pago = +dinero; // 
+console.log( pago ); // -3
+
+let intereses = +"5.23"; // number
+console.log( 5 + intereses ); //  10.23
+console.log( 5 + parseInt(intereses) ); //  10.23
+
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 let pagoFinal = 0;
 console.log( pagoFinal += 5 + + "3" ); // 8
 console.log( pagoFinal += 5 + parseFloat ("3") ); // 8
 
+<<<<<<< HEAD
 // Operador de incremento y decremento en unidad.
 /*
     Operador de pre-incremento y pre-decremento
@@ -171,12 +324,29 @@ console.log( pagoFinal += 5 + parseFloat ("3") ); // 8
     Operador de post-incremento y post-decremento
         valor ++
         valor --
+=======
+
+// Operador de incremento y decremento en unidad.
+/*
+  Operador de pre-incremento y pre-decremento
+    ++ valor
+    -- valor
+
+  Operador de post-incremento y post-decremento
+    valor ++
+    valor --
+
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 */
 
 let number = 10;
 ++ number; // number = number + 1
 console.log( number ); // 11
+<<<<<<< HEAD
 number ++; // number; number = number + 1;
+=======
+number ++; // number; number = number + 1; 
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 console.log( number ); // 12
 
 // Uso de post-incremento
@@ -192,6 +362,7 @@ console.log( number ); // 21
 number = 40;
 console.log( number = number + 1 ); // 41
 console.log( number ); // 41
+<<<<<<< HEAD
 // ++valor
 number = 40;
 console.log( ++number );
@@ -201,14 +372,31 @@ number = 100;
 let kati = 10;
 console.log( kati + + number ); // 110
 console.log( kati + ++number ); // 111
+=======
+
+// ++valor
+number = 40;
+console.log( ++number ); // 41
+console.log( number ); // 41
+
+number = 100;
+let kati = 10;
+console.log( kati + + number  ); // 110
+console.log( kati + ++number  ); // 111
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 
 // ------------ Ejercicio Mental ---------------------
 let x = 3;
 let y = x++; // y:3   x:4
+<<<<<<< HEAD
+=======
+
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 console.log(`x :${ x++ } y:${ ++y }`); // x:4    y:4
                                        // x:5
 console.log(`x :${ x } y:${ y }`); // x:5     y:4
 
+<<<<<<< HEAD
 // ------------- Ejercicio mental -------------------
 let a = 0, b = 0;
 
@@ -221,15 +409,40 @@ console.log(a,b)
 a = 0, b = 0; // 
 for( ; a < 3 ; b = ++a){ // b=1 a=1, b=2 a=2, b=3 a=3
     console.log( a , b ); 
+=======
+// ------------ Ejercicio Mental ---------------------
+
+// let a = b = 0; b es declara con var
+let a = 0, b = 0; // a y b son declaradas con let
+
+for( ; a < 3 ; b = a++){ // b=0 a=1 |  b=1 a=2 |  b=2  a=3
+  console.log( a , b ); 
+  // N.Iteración     a     b
+  //     1           0     0
+  //     2           1     0
+  //     3           2     1
+}
+console.log( a , b ); // 3 , 2
+
+// ------------ Ejercicio Mental ---------------------
+a = 0, b = 0; // 
+
+for(    ; a < 3 ; b = ++a){ // b=1 a=1, b=2 a=2, b=3 a=3
+  console.log( a , b ); 
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
   // N.Iteración     a     b
   //   1             0     0
   //   2             1     1
   //   3             2     2
+<<<<<<< HEAD
 
+=======
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
 }
 console.log( a , b ); // 3, 3
 
 // =============Imprimir los valores d array ====================
+<<<<<<< HEAD
 const numeros = [2,4,5,67,8];
 let indice = 0;
 while( indice < numeros.length  ){
@@ -302,3 +515,72 @@ esAutorizado ? console.log("Acceso concedido") : console.log("Acceso denegado");
 
 
 
+=======
+
+const numeros = [2,4,5,67,8];
+let indice = 0;
+while( indice < numeros.length  ){
+  console.log("Número:" , numeros[indice++] );
+  //indice = indice + 1;  
+}
+
+
+// ---------------- Operadores lógicos && y || ---------------
+/*
+ También son conocidos como operadores de corto circuito ( short-circuit operators ).
+
+ OP1 && OP2 Si OP1 es verdadero, se retorna la expresión de OP2.
+ OP1 || OP2 Si OP1 es verdadero, se retorna la expresión de OP1.
+
+ Se consideran falsos: "", 0, null, undefined, NaN
+*/
+console.log( true && false ); // false
+console.log( true && "Usando corto circuito ");// "Usando corto circuito"
+console.log( "false" && "Mi mente sigue de vacaciones");// "Mi mente sigue de vacaciones"
+console.log( 0 && "Chau, chau"); // 0
+console.log( "" && "Chau, chau"); // "" empty string
+console.log( false && "Chau, chau"); // false
+
+console.log( true || false ); // true
+console.log( true || "Usando corto circuito "); // true
+console.log( "false" || "Mi mente sigue de vacaciones"); // "false"
+console.log( 0 || "Chau, chau"); //  "Chau, Chau"
+console.log( "" || "Chau, chau"); // "Chau, Chau"
+console.log( false || "Chau, chau"); //  "Chau, Chau"
+console.log( false || undefined ); // undefined
+
+console.log( "Activado" && undefined ); // undefined
+
+// ------------- casos prácticos -----------------------
+// console.log(   variableSinDeclarar ); // La variable no ha sido declarada
+console.log( true || variableSinDeclarar   ); 
+
+// -----------------------------------------------------
+let loggedIn = false;
+loggedIn && console.log("Bienvenido Usuario"); // false; NO se imprime en consola
+
+// ------------ ejercicio-------------------------------
+// Mostrar en consola "Acceso permitido" solo si la variable esAdmin = true
+let esAdmin = true;
+esAdmin && console.log("Acceso permitido");
+
+// ------------------------------------------------------
+let nombre = "";
+let usuario = nombre || "Invitado";
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+//let usuario = nombre ?? "Invitado"; // funciona para null y undefined
+
+console.log( "Hola " + usuario ); // Invitado
+
+// ------------------ Ejercicio --------------------------
+/*
+  Imprimir en consola "Acceso Denegado" Si la variable esAutorizado = false
+  En caso contrario imprimir "Acceso concedido".
+*/
+let autorizado = true;
+
+let message = autorizado && "Acceso concedido" || "Acceso denegado";
+console.log( message );
+
+console.log( autorizado? "Acceso concedido":"Acceso denegado" );
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346

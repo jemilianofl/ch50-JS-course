@@ -364,7 +364,11 @@ function generarLista(tamañoLista = 100) {
 }
 const ordenarDescendente = (lista) => {
     lista.sort((a, b) => b - a);
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
     for (let i = 0; i < lista.length; i++) {
         console.log(`${i}. tu numero es: ${lista[i]}`);
     }
@@ -372,4 +376,7 @@ const ordenarDescendente = (lista) => {
 // ordenarDescendente(generarLista(100));
 const numerosAleatorios = generarLista();
 console.log("Ordenaros con sort", numerosAleatorios.sort( (a,b)=>b-a ) );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 45e855bc3fc656fa0c908900e860cd24f583e346
