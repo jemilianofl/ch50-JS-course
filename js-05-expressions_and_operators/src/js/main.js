@@ -253,3 +253,52 @@ console.log( "false" && "Mi mente sigue de vacaciones" ); // "Mi mente sigue de 
 console.log( 0 && "Chau, chau" ); // 0
 console.log( "" && "Chau, chau" ); // "" empty string
 console.log( false && "Chau, chau" ) // false
+
+console.log( true || false ); // true
+console.log( true || "Usando corto circuito" ); // true
+console.log( "false" || "Mi mente sigue de vacaciones" ); // "false"
+console.log( 0 || "Chau, chau" ); // "Chau, chau"
+console.log( "" || "Chau, chau" ); // "Chau, chau"
+console.log( false || "Chau, chau" ) // "Chau, chau"
+console.log( false || undefined ); // undefined
+
+console.log( "Activado" && undefined ); // "Activado"
+
+// --------------- casos prácticos ----------------------
+console.log( true || variableSinDeclarar );
+
+let loggedIn = false;
+loggedIn && console.log("Bienvenido Usuario"); // Se rompe porque loggedIn es false
+
+// ---------------- ejercicio -------------------------
+// Mostrar en consola "Acceso permitido" solo si la variable esAdmin = true
+
+function login(){
+    let esAdmin = true;
+    esAdmin && console.log("Acceso permitido");
+}
+login();
+
+// -----------------------------------------------------------
+let nombre = "";
+let usuario = nombre || "Invitado";
+console.log( "Hola" + usuario ); // Invitado
+
+// ------------------ Ejercicio --------------------------
+/*
+    Imprimir en consola "Acceso Denegado" es la variable esAutorizado = false
+    En caso contrario imprimir "Acceso concedido".
+*/
+
+let esAutorizado = false;
+
+esAutorizado && console.log("Acceso concedido");
+esAutorizado || console.log("Acceso denegado");
+
+esAutorizado && console.log("Acceso concendido") || console.log("Acceso denegado");
+
+esAutorizado ? console.log("Acceso concedido") : console.log("Acceso denegado");
+
+
+
+
