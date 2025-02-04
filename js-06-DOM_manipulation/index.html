@@ -44,7 +44,7 @@
     <section class="row align-items-center justify-content-center" id="main-content">
       <!-- logo -->
       <figure class="col-lg-5 col-9">
-        <img class="img-fluid rounded" src="./public/images/dino.jpg" alt="Dinosaurio rex escribiendo código" />
+        <img id="dino" class="img-fluid rounded" src="./public/images/dino.jpg" alt="Dinosaurio rex escribiendo código" />
       </figure>
       <!-- principal title -->
       <div class="col-lg-3 col-12 text-warning">
@@ -67,7 +67,7 @@
           son símbolos que permiten realizar operaciones sobre uno o más valores (operandos)
           para producir un resultado.
         </p>
-        <p class="text-start">
+        <p id="descripcion-operadores" class="text-start">
           Los operadores y expresiones en JavaScript permiten manipular datos, realizar cálculos y tomar decisiones en
           el código. Son esenciales para construir lógica y funcionalidad en cualquier programa.
         </p>
@@ -83,7 +83,11 @@
     </section>
 
     <section class="row my-3">
-
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button id="btn-primary" type="button" class="btn btn-primary">Left</button>
+        <button id="btn-secondary" type="button" class="btn btn-secondary">Middle</button>
+        <button id="btn-success" type="button" class="btn btn-success">Right</button>
+      </div>
     </section>
   </main>
 
