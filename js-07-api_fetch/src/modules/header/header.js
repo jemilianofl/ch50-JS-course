@@ -1,7 +1,7 @@
 
 
 const insertMainHeader = ()=>{
-     const header = document.getElementById("header");
+    const header = document.getElementById("header");
 
      header.innerHTML = `
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
