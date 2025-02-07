@@ -2,9 +2,8 @@
  * 
  * @param {object} userData datos del usuario
  */
-
 const userCard = ( userData ) =>{
-   const card = `
+    const card = `
     <div class="col-sm-6 col-md-4 col-lg-3 p-3">
         <div class="card" >
             <figure>
@@ -19,6 +18,10 @@ const userCard = ( userData ) =>{
     </div>
     `;
     return card;
-}
+};
 
+ // exportación nombrada
+ // export { userCard };
+
+ // exportación por defaul. Solo se puede exportar un solo elemento
 export default userCard;
