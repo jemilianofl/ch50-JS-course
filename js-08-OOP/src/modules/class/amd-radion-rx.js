@@ -4,7 +4,17 @@ const amdRadeonRx = {
     title: "Tarjeta de Video PowerColor AMD Radeon RX 7800 XT OC Red Devil / 16GB 256-bit GDDR6 / PCI Express 4.0 / RX7800XT 16G-E/OC",
     price:10699,
     categories: ["graphic Card", "AMD RADEON"],
-    model: "RX7800XT"
+    model: "RX7800XT",
+    dato1: "Descrip 1",
+    dato2: "Descrip 1",
+    dato3: "Descrip 1",
+    compatibilidad:["Mother Board 5689", "Mother Board 202000"],
+    imprimirPrecioMxN: function(){
+        return `$ ${this.price} M.N.`
+    },
+    imprimirPrecioDolares: function(){
+        return `$ ${this.price/20} dolares.`
+    }
 }
 
 const mouseGamerPixArt = {
@@ -14,6 +24,12 @@ const mouseGamerPixArt = {
     price: 1629,
     categories: ["mouse", "NZXT"],
     model: "MS-101NB-01",
+    imprimirPrecioMxN: function(){
+        return `$ ${this.price} M.N.`
+    },
+    imprimirPrecioDolares: function(){
+        return `$ ${this.price/20} dolares.`
+    }
 };
 
 export { amdRadeonRx, mouseGamerPixArt };

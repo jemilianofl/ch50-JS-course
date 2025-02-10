@@ -1,6 +1,7 @@
 import { insertMainHeader } from "/src/modules/header/header.js";
 import { insertMainFooter } from "/src/modules/footer/footer.js";
-import { amdRadeonRx } from "../modules/class/amd-radion-rx.js";
+import { amdRadeonRx, mouseGamerPixArt } from "../modules/class/amd-radion-rx.js";
+import { Product } from "../modules/class/Product.js";
 
 /*
     Ruta relativa: Son rutas que dependen de la ubicación actual del archivo
@@ -28,3 +29,27 @@ console.log( amdRadeonRx.title );
 console.log( amdRadeonRx["title"] );
 attribute = "title";
 console.log( amdRadeonRx[attribute] );
+
+// accediendo a atributos que no existen
+console.log( amdRadeonRx.dato1 ); // Descrip 1
+console.log( mouseGamerPixArt.dato1 ); //  undefined
+console.log( mouseGamerPixArt.compatibilidad ); //  undefined
+
+// Obteniendo el número de elementos
+console.log( amdRadeonRx.compatibilidad.length ); // 2
+//console.log( mouseGamerPixArt.compatibilidad.length ); // Cannot read properties of undefined
+
+// Operador de encadenamiento opcional  ( ?. )
+console.log( mouseGamerPixArt.compatibilidad?.length ); 
+console.log( amdRadeonRx.imprimirPrecioMxN() );
+console.log( amdRadeonRx.imprimirPrecioDolares() );
+console.log( mouseGamerPixArt.imprimirPrecioMxN() );
+console.log( mouseGamerPixArt.imprimirPrecioDolares() );
+
+// ======== Usando la clase Product ======== //
+const mouseLogi = new Product("Mouse");
+const tecladoGamer = new Product("Teclado");
+const monitorHp = new Product("Monitor");
+const bateria = new Product();3
+
+
