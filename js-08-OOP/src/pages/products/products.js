@@ -5,5 +5,9 @@ import { getProducts } from "../../modules/api/getProducts/getProducts.js";
 
 insertMainHeader();
 insertMainFooter();
+
+/**
+ * Lee nuestro archivo JSON para avanzar en nuestro desarrollo del frontend
+ */
 getProducts("/public/json/gaming-products.json");
 
