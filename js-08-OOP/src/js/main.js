@@ -2,6 +2,8 @@ import { insertMainHeader } from "/src/modules/header/header.js";
 import { insertMainFooter } from "/src/modules/footer/footer.js";
 import { amdRadeonRx, mouseGamerPixArt } from "../modules/class/amd-radion-rx.js";
 import { Product } from "../modules/class/Product.js";
+import { Mouse } from "../modules/class/Mouse.js";
+
 
 /*
     Ruta relativa: Son rutas que dependen de la ubicación actual del archivo
@@ -47,9 +49,27 @@ console.log( mouseGamerPixArt.imprimirPrecioMxN() );
 console.log( mouseGamerPixArt.imprimirPrecioDolares() );
 
 // ======== Usando la clase Product ======== //
-const mouseLogi = new Product("Mouse");
+const mouseLogi = new Product("Mouse", 800, "Logitech");
 const tecladoGamer = new Product("Teclado");
 const monitorHp = new Product("Monitor");
-const bateria = new Product();3
+const bateria = new Product();
 
+mouseLogi.price = 1;
+console.table( mouseLogi );
 
+console.log( mouseLogi.productName );
+console.log( mouseLogi.printPrice() );
+
+// ===== Usar la clase mouse
+
+const mouseMac = new Mouse("Mouse Mac", 1400, "Mac", 3000 )
+console.log( mouseMac.printPrice() );
+
+// Generando un array de Mice
+const mice = [mouseLogi, mouseMac, new Mouse("m3",3,"N/A",1000) ];
+
+for(let mouse of mice){
+    //Qué método se va a utilizar?
+    console.log( mouse.card() );
+
+}
