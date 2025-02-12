@@ -12,9 +12,15 @@ import { Product } from "./Product.js";
 class Mouse extends Product {
     // Velocidad de respuesta
     #dpi
+<<<<<<< HEAD
     
     constructor (productName, price, brand, dpi) {
         super( productName, price, brand );
+=======
+
+    constructor (productName, price, brand, dpi){
+        super( productName, price, brand )
+>>>>>>> 8d79d0933bb22196b5b3f8c1d8c7c5ea0cebcfb3
         this.#dpi = dpi;
     }
 
@@ -23,6 +29,7 @@ class Mouse extends Product {
     }
 
     get dpi(){
+<<<<<<< HEAD
         return this.#dpi;
     }
 
@@ -33,6 +40,19 @@ class Mouse extends Product {
             <p>Llévatelo por ${this.price} MxN</p>
         `
     }
+=======
+        return `${this.#dpi} dpis`;
+    }
+
+    // sobreescritura de método
+    card() {
+        return `
+            <h2>${this.productName}</h2>
+            <h3>${this.dpi}</h3>
+            <p>Llévatelo por ${this.price}</p>
+        `
+      }
+>>>>>>> 8d79d0933bb22196b5b3f8c1d8c7c5ea0cebcfb3
 
 }
 

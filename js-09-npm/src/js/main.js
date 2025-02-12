@@ -12,7 +12,7 @@ import { welcome } from "../pages/welcome/welcome";
  * que el DOM (Document Object Model) y los recursos externos han terminado de cargarse.
  * 
  */
-window.addEventListener( "load", () => document.getElementById("app").innerHTML = `
+document.getElementById("app").innerHTML = `
 
     ${ insertMainHeader() } 
     <main class="container text-center my-4">
@@ -20,4 +20,3 @@ window.addEventListener( "load", () => document.getElementById("app").innerHTML 
     </main>
     ${ insertMainFooter() }
 `
-);
