@@ -1,19 +1,11 @@
 {
   "name": "js-09-npm",
   "version": "0.0.1",
-<<<<<<< HEAD
   "description": "sesión correspondiente a JS-09",
   "main": "/src/js/main.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-=======
-  "description": "Sesión correspondiente a JS-09",
-  "main": "/src/js/main.js",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build", 
->>>>>>> 8d79d0933bb22196b5b3f8c1d8c7c5ea0cebcfb3
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,11 +15,7 @@
     "generation",
     "axios"
   ],
-<<<<<<< HEAD
   "author": "Emiliano Flores",
-=======
-  "author": "Sergio Torres",
->>>>>>> 8d79d0933bb22196b5b3f8c1d8c7c5ea0cebcfb3
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.84.0",
