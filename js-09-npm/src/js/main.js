@@ -19,6 +19,5 @@ window.addEventListener( "load", () => document.getElementById("app").innerHTML 
         ${ welcome() }
     </main>
     ${ insertMainFooter() }
- `
+`
 );
- 
